@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Descriptionactivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/destoolbar"
+        android:background="@color/teal_700"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/destoolbar"
+        android:id="@+id/desscroll"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:weightSum="6"
+                android:orientation="horizontal"
+                android:id="@+id/deslinearlayout"
+                >
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/desimage"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/deslinearrelative">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name of the Book"
+                        android:id="@+id/desnamebook"
+                        android:textSize="18sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="author name"
+                        android:id="@+id/desauthorname"
+                        android:textSize="15sp"
+                        android:layout_below="@+id/desnamebook"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000000"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 299"
+                        android:id="@+id/desprice"
+                        android:textSize="18sp"
+                        android:layout_below="@+id/desauthorname"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        />
+                </RelativeLayout>
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1.2"
+                   android:padding="4dp"
+                   android:text="4.5"
+                   android:id="@+id/desrating"
+                   android:drawableLeft="@drawable/start"
+                   android:textColor="#DB8D09"
+                   android:textSize="18sp"
+                   android:textStyle="bold"
+                   />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/deslinearlayout"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About the Book"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:padding="6dp"
+                    android:id="@+id/desaboutbook"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description of boook"
+                    android:layout_below="@+id/desaboutbook"
+                    android:textSize="15sp"
+                    android:padding="6dp"
+                    android:id="@+id/despriction"
+                    android:textColor="#000000"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/desBuuton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/teal_700"
+        android:text="Adding to Favourite"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        tools:ignore="TextContrastCheck" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progressbarlayout"
+        android:background="#fff"
+
+        >
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/pro"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
